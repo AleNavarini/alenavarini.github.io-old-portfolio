@@ -21,7 +21,7 @@ html[data-theme='dark'] {
 ;
 }
 
-*, a {
+* {
   color: var(--color-text);
 }
 
@@ -49,10 +49,57 @@ h2 {
       grid-template-columns: 70% 30%;
   -ms-grid-rows: auto auto;
       grid-template-rows: auto auto;
-      grid-template-areas: "main sidebar";
+      grid-template-areas: "lang toggle" "main sidebar";
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.lang {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: lang;
+}
+
+.lang-list {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.lang-list-item {
+  font-size: 1.3em;
+  padding-left: 1em;
+  margin-top: 0;
+}
+
+.lang-list-item a {
+  text-decoration: none;
+}
+
+.lang-list-item a:hover {
+  -webkit-transition-duration: 0.1s;
+          transition-duration: 0.1s;
+  border-bottom: 2px solid var(--color-headings);
+}
+
+.langlist-active {
+  border-bottom: 2px solid var(--color-headings);
+}
+
+.toggle {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: toggle;
+  -ms-grid-column-align: end;
+      justify-self: end;
 }
 
 .main {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: main;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 100%;
@@ -127,26 +174,21 @@ h2 {
 }
 
 .sidebar {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: sidebar;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 100%;
       grid-template-columns: 100%;
-  -ms-grid-rows: 15% auto auto auto;
-      grid-template-rows: 15% auto auto auto;
-      grid-template-areas: "toggle" "contact" "lang" "tech";
+  -ms-grid-rows: auto auto auto;
+      grid-template-rows: auto auto auto;
+      grid-template-areas: "contact" "lang" "tech";
   padding-left: 1.5em;
 }
 
-.toggle {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: toggle;
-  -ms-grid-column-align: end;
-      justify-self: end;
-}
-
 .contact {
-  -ms-grid-row: 2;
+  -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: contact;
 }
