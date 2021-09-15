@@ -1,0 +1,206 @@
+html {
+  height: 100%;
+  font-family: 'Montserrat';
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  --bg: #FCFCFC;
+  --bg-panel: #EBEBEB;
+  --color-headings: #0077FF;
+  --color-text: #333333;
+  --lines:#808080
+;
+}
+
+html[data-theme='dark'] {
+  --bg: #333333;
+  --bg-panel: #434343;
+  --color-headings: #3694FF;
+  --color-text: #B5B5B5;
+  --lines: #808080
+;
+}
+
+*, a {
+  color: var(--color-text);
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+}
+
+ul {
+  list-style: none;
+}
+
+h2 {
+  margin: 0;
+}
+
+.container {
+  background-color: var(--bg-panel);
+  border-radius: 15px;
+  margin: 2em 5em 0 5em;
+  padding: 2em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 70% 30%;
+      grid-template-columns: 70% 30%;
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
+      grid-template-areas: "main sidebar";
+}
+
+.main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: auto auto auto auto;
+      grid-template-rows: auto auto auto auto;
+      grid-template-areas: "header" "profile" "experience" "education";
+  border-right: 1px solid var(--lines);
+}
+
+.header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: header;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 60%;
+      grid-template-columns: auto 60%;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+      grid-template-areas: "pic header-info";
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+}
+
+.pic {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: pic;
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+.header-info {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: header-info;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -ms-grid-column-align: start;
+      justify-self: start;
+  margin-left: 3em;
+}
+
+.title {
+  font-size: 3em;
+}
+
+.title-role {
+  font-size: 1.5em;
+}
+
+.content {
+  margin: 1.5em 3em 0em 1.5em;
+}
+
+.profile {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: profile;
+}
+
+.list {
+  border-left: 1px solid var(--lines);
+}
+
+.date {
+  font-size: 0.9em;
+  margin-top: 0.2em;
+}
+
+.sidebar {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: 15% auto auto auto;
+      grid-template-rows: 15% auto auto auto;
+      grid-template-areas: "toggle" "contact" "lang" "tech";
+  padding-left: 1.5em;
+}
+
+.toggle {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: toggle;
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+.contact {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: contact;
+}
+
+.sidebar-item {
+  font-size: 1.2em;
+  margin-bottom: 0.2em;
+}
+
+.sidebar-list {
+  list-style-type: circle;
+}
+
+input[type=checkbox] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 100px;
+  height: 50px;
+  background: grey;
+  display: block;
+  border-radius: 50px;
+  position: relative;
+}
+
+label:after {
+  content: '';
+  position: absolute;
+  top: 2.5px;
+  left: 2.5px;
+  width: 45px;
+  height: 45px;
+  background: #fff;
+  border-radius: 45px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+input:checked + label {
+  background: var(--color-headings);
+}
+
+input:checked + label:after {
+  left: calc(100% - 2.5px);
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+label:active:after {
+  width: 130px;
+}
+/*# sourceMappingURL=main.css.map */
