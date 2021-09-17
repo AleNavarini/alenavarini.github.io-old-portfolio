@@ -36,6 +36,8 @@ h2{
 }
 
 .container {
+    min-width: 965px;
+    max-width: 1500px;
     background-color: var(--bg-panel);
     border-radius: 15px;
     margin: 2em 5em 0 5em;
