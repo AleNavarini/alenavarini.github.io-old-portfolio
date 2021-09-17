@@ -70,22 +70,10 @@ h2 {
 
 .lang-list-item {
   font-size: 1.3em;
-  padding-left: 1em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
   margin-top: 0;
-}
-
-.lang-list-item a {
-  text-decoration: none;
-}
-
-.lang-list-item a:hover {
-  -webkit-transition-duration: 0.1s;
-          transition-duration: 0.1s;
-  border-bottom: 2px solid var(--color-headings);
-}
-
-.langlist-active {
-  border-bottom: 2px solid var(--color-headings);
+  cursor: pointer;
 }
 
 .toggle {
@@ -208,7 +196,7 @@ input[type=checkbox] {
   visibility: hidden;
 }
 
-label {
+label[for=switch] {
   cursor: pointer;
   text-indent: -9999px;
   width: 100px;
@@ -219,7 +207,7 @@ label {
   position: relative;
 }
 
-label:after {
+label[for=switch]:after {
   content: '';
   position: absolute;
   top: 2.5px;
@@ -232,11 +220,11 @@ label:after {
   transition: 0.3s;
 }
 
-input:checked + label {
+input[type=checkbox]:checked + label[for=switch] {
   background: var(--color-headings);
 }
 
-input:checked + label:after {
+input[type=checkbox]:checked + label[for=switch]:after {
   left: calc(100% - 2.5px);
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
@@ -244,5 +232,13 @@ input:checked + label:after {
 
 label:active:after {
   width: 130px;
+}
+
+input[type=radio] {
+  display: none;
+}
+
+input[type=radio]:checked + label {
+  border-bottom: solid 2px var(--color-headings);
 }
 /*# sourceMappingURL=main.css.map */
