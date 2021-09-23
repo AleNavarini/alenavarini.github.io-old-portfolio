@@ -48,14 +48,14 @@ h2 {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 70% 30%;
-      grid-template-columns: 70% 30%;
+  grid-template-columns: 70% 30%;
   -ms-grid-rows: auto auto;
-      grid-template-rows: auto auto;
-      grid-template-areas: "lang toggle" "main sidebar";
+  grid-template-rows: auto auto;
+  grid-template-areas: "lang toggle" "main sidebar";
   justify-items: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: start;
 }
 
 .lang {
@@ -96,7 +96,10 @@ h2 {
       grid-template-columns: 100%;
   -ms-grid-rows: auto auto auto auto;
       grid-template-rows: auto auto auto auto;
-      grid-template-areas: "header" "profile" "experience" "education";
+      grid-template-areas: "header"
+ "profile"
+ "experience"
+ "education";
   border-right: 1px solid var(--lines);
 }
 
@@ -173,7 +176,9 @@ h2 {
       grid-template-columns: 100%;
   -ms-grid-rows: auto auto auto;
       grid-template-rows: auto auto auto;
-      grid-template-areas: "contact" "lang" "tech";
+      grid-template-areas: "contact"
+ "lang"
+ "tech";
   padding-left: 1.5em;
 }
 
