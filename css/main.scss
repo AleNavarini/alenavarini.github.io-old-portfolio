@@ -22,6 +22,7 @@ html[data-theme='dark'] {
 *{
     color: var(--color-text);
 }
+
 body {
     margin: 0;
     background-color: var(--bg);
@@ -31,8 +32,12 @@ ul {
     list-style: none;
 }
 
-h2{
+h2, h3{
     margin: 0;
+}
+
+i{
+    font-size: 1.5em;
 }
 
 .container {
@@ -45,12 +50,9 @@ h2{
     display: grid;
     grid-template-columns: 70% 30%;
     grid-template-rows: auto auto;
-    grid-template-areas:
-        "lang toggle"
-        "main sidebar"
-    ;
+    grid-template-areas: "lang toggle" "main sidebar";
     justify-items: center;
-    align-items: center;
+    align-items: flex-start;
 }
 .lang {
     grid-area: lang;   
@@ -80,6 +82,8 @@ h2{
         "profile"
         "experience"
         "education"
+        "participations"
+        "courses"
     ;
     border-right: 1px solid var(--lines);
 }
@@ -101,15 +105,18 @@ h2{
     grid-area: pic;
     justify-self: end;
 }
+
 .header-info {
     grid-area: header-info;
     align-content: flex-start;
     justify-self: start;
     margin-left: 3em;
 }
+
 .title{
     font-size: 3em;
 }
+
 .title-role{
     font-size: 1.5em;
 }
@@ -117,8 +124,25 @@ h2{
 .content {
     margin: 1.5em 3em 0em 1.5em;
 }
+
 .profile {
     grid-area: profile;
+}
+
+.education{
+    grid-area: education;
+}
+
+.experience{
+    grid-area: experience;
+}
+
+.participations{
+    grid-area: participations;
+}
+
+.courses{
+    grid-area: courses;
 }
 
 .list {
@@ -129,6 +153,7 @@ h2{
     font-size: 0.9em;
     margin-top: 0.2em;
 }
+
 .sidebar {
     grid-area: sidebar;
     display: grid;
@@ -140,15 +165,18 @@ h2{
         "tech"
     ;
     padding-left: 1.5em;
+    padding-top: 1.5em;
 }
 
 .contact {
     grid-area: contact;
 }
+
 .sidebar-item{
     font-size: 1.2em;
     margin-bottom: 0.2em;
 }
+
 .sidebar-list{
     list-style-type: circle;
 }
@@ -195,7 +223,6 @@ input[type=checkbox]:checked + label[for=switch]:after {
 label:active:after {
 	width: 130px;
 }
-
 
 input[type=radio] {
     display:none;   
