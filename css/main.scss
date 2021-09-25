@@ -19,7 +19,6 @@ html[data-theme='dark'] {
     --color-text: #EFE9E9;
     --lines: #808080
 }
-
 *{
     color: var(--color-text);
 }
@@ -59,15 +58,12 @@ i{
     justify-items: center;
     align-items: center;
 }
-
 .lang {
     grid-area: lang;   
 }
-
 .lang-list{
     display: inline-flex;
 }
-
 .lang-list-item{
     font-size: 1.3em;
     margin-left:0.5em;
@@ -80,7 +76,6 @@ i{
     grid-area: toggle;
     justify-self: end;
 }
-
 .main {
     grid-area: main;
     display: grid;
@@ -187,10 +182,6 @@ i{
 
 .sidebar-list{
     list-style-type: circle;
-}
-
-.tech{
-    grid-area: tech;
 }
 
 // toggle
