@@ -19,20 +19,27 @@ html[data-theme='dark'] {
     --color-text: #EFE9E9;
     --lines: #808080
 }
+
 *{
     color: var(--color-text);
 }
+
 body {
     margin: 0;
-    background-color: var(--bg);
+    //background-color: var(--bg);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(60,60,117,1) 36%, rgba(50,59,61,1) 63%, rgba(60,60,117,1) 76%);
 }
 
 ul {
     list-style: none;
 }
 
-h2{
+h2, h3{
     margin: 0;
+}
+
+i{
+    font-size: 1.5em;
 }
 
 .container {
@@ -52,12 +59,15 @@ h2{
     justify-items: center;
     align-items: center;
 }
+
 .lang {
     grid-area: lang;   
 }
+
 .lang-list{
     display: inline-flex;
 }
+
 .lang-list-item{
     font-size: 1.3em;
     margin-left:0.5em;
@@ -70,6 +80,7 @@ h2{
     grid-area: toggle;
     justify-self: end;
 }
+
 .main {
     grid-area: main;
     display: grid;
@@ -80,6 +91,8 @@ h2{
         "profile"
         "experience"
         "education"
+        "participations"
+        "courses"
     ;
     border-right: 1px solid var(--lines);
 }
@@ -101,15 +114,18 @@ h2{
     grid-area: pic;
     justify-self: end;
 }
+
 .header-info {
     grid-area: header-info;
     align-content: flex-start;
     justify-self: start;
     margin-left: 3em;
 }
+
 .title{
     font-size: 3em;
 }
+
 .title-role{
     font-size: 1.5em;
 }
@@ -117,8 +133,25 @@ h2{
 .content {
     margin: 1.5em 3em 0em 1.5em;
 }
+
 .profile {
     grid-area: profile;
+}
+
+.education{
+    grid-area: education;
+}
+
+.experience{
+    grid-area: experience;
+}
+
+.participations{
+    grid-area: participations;
+}
+
+.courses{
+    grid-area: courses;
 }
 
 .list {
@@ -129,6 +162,7 @@ h2{
     font-size: 0.9em;
     margin-top: 0.2em;
 }
+
 .sidebar {
     grid-area: sidebar;
     display: grid;
@@ -145,12 +179,18 @@ h2{
 .contact {
     grid-area: contact;
 }
+
 .sidebar-item{
     font-size: 1.2em;
     margin-bottom: 0.2em;
 }
+
 .sidebar-list{
     list-style-type: circle;
+}
+
+.tech{
+    grid-area: tech;
 }
 
 // toggle
@@ -195,7 +235,6 @@ input[type=checkbox]:checked + label[for=switch]:after {
 label:active:after {
 	width: 130px;
 }
-
 
 input[type=radio] {
     display:none;   

@@ -27,15 +27,20 @@ html[data-theme='dark'] {
 
 body {
   margin: 0;
-  background-color: var(--bg);
+  background: -webkit-gradient(linear, left top, right top, from(#020024), color-stop(36%, #3c3c75), color-stop(63%, #323b3d), color-stop(76%, #3c3c75));
+  background: linear-gradient(90deg, #020024 0%, #3c3c75 36%, #323b3d 63%, #3c3c75 76%);
 }
 
 ul {
   list-style: none;
 }
 
-h2 {
+h2, h3 {
   margin: 0;
+}
+
+i {
+  font-size: 1.5em;
 }
 
 .container {
@@ -96,7 +101,7 @@ h2 {
       grid-template-columns: 100%;
   -ms-grid-rows: auto auto auto auto;
       grid-template-rows: auto auto auto auto;
-      grid-template-areas: "header" "profile" "experience" "education";
+      grid-template-areas: "header" "profile" "experience" "education" "participations" "courses";
   border-right: 1px solid var(--lines);
 }
 
@@ -154,6 +159,30 @@ h2 {
   grid-area: profile;
 }
 
+.education {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: education;
+}
+
+.experience {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: experience;
+}
+
+.participations {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: participations;
+}
+
+.courses {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  grid-area: courses;
+}
+
 .list {
   border-left: 1px solid var(--lines);
 }
@@ -190,6 +219,12 @@ h2 {
 
 .sidebar-list {
   list-style-type: circle;
+}
+
+.tech {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: tech;
 }
 
 input[type=checkbox] {
