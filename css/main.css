@@ -55,11 +55,11 @@ i {
       grid-template-columns: 70% 30%;
   -ms-grid-rows: auto auto;
       grid-template-rows: auto auto;
-      grid-template-areas: "lang toggle" "main sidebar";
+      grid-template-areas: "lang toggle" "main sidebar";
   justify-items: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .lang {
@@ -203,6 +203,7 @@ i {
       grid-template-rows: auto auto auto;
       grid-template-areas: "contact" "lang" "tech";
   padding-left: 1.5em;
+  padding-top: 1.5em;
 }
 
 .contact {
