@@ -8,7 +8,7 @@
             "experience": "Experience",
             "job_1_title": "FullStack Developer - Mutual de Socios de AMR",
             "job_1_date": "2021 - To the present",
-            "job_1_desc": "I work mainly as a C# developer doing both web and desktop applications. I also have to solve tasks using APIs and frontend technologies.",
+            "job_1_desc": "I work as a FullStack Developer maintaining and developing C# desktop and web applications, I also have configured CI/CD pipelines along with Docker containers and Kubernetes clusters to deploy said applications, also using SQL and MongoDB databases. I am currently working in a Data Science project helping with analysis and Python development",
             "job_2_title": "Developer – KRETZ SA",
             "job_2_date": "2019 - 2020",
             "job_2_desc": "Developer for Kretz S.A. performing maintenance and programming tasks on the company's software. Using JAVA, GitLab, occasionally Ionic, HTML and CSS.",
