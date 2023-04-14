@@ -230,3 +230,7 @@ input[type=radio] {
 input[type=radio]:checked + label {
     border-bottom: solid 2px var(--color-headings);
 }
+
+.work-bullet {
+    list-style-type: disc;
+}
